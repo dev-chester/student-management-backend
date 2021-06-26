@@ -2,7 +2,7 @@ require("@babel/register");
 const app = require("./app");
 
 const setUpExpress = () => {
-  const port = process.env.APP_PORT || 3000;
+  const port = process.env.PORT || 3000;
 
   const server = app.listen(port, () => {
     console.log(`App running on port ${port}`);
