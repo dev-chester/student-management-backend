@@ -12,7 +12,7 @@
  2. Create an .env file in root folder project
  
  ```
- APP_PORT=4000
+ PORT=4000
  DB_HOST=localhost
  DB_USER=root
  DB_PASS=
