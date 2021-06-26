@@ -30,7 +30,6 @@ class RetrieveNotification {
       .split(" ")
       .filter( e => e.charAt(0) === '@')
       .map( e => e.substring(1,e.length));
-    debugger;
 
     // All mentioned students that were not suspended
     const mentionedStudentsNotSuspended = await models.Student.findAll({
@@ -45,7 +44,6 @@ class RetrieveNotification {
     let aResults = [subscribedStudents.students, mentionedStudentsNotSuspended].flat();
 
     let oRes = {"recipients": [...new Set(aResults.map((student) => student.email))]};
-    debugger;
     return oRes;
 
   }
