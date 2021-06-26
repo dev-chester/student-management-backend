@@ -25,7 +25,9 @@
  
  3. Install the dependencies
  
- ``npm install``
+ ```
+ npm install
+ ```
  
  4. Setup the database - (This will ``drop``,``create``, and ``migrate``)
  
