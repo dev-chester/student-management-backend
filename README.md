@@ -37,8 +37,14 @@
  ---
  ### Run
  
- 1. Run locally
+ - Run locally.. or
  
  ```
  npm run dev
+ ```
+ 
+
+ - Run in Heroku using this base URL:
+ ```
+ https://student-mgmt-backend.herokuapp.com/api/
  ```
