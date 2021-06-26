@@ -1,0 +1,17 @@
+var path = require('path')
+
+if (process.env.NODE_ENV == "test") {
+  require('dotenv').config({ path: './.env.test' }); 
+} else {
+  require('dotenv').config(); 
+}
+
+
+
+module.exports = {
+  'config': path.resolve('src', 'config/config.js'),
+  'migrations-path': path.resolve('src', 'migrations'),
+  'models-path':     path.resolve('src', 'models'),
+  'seeders-path':    path.resolve('src', 'seeders'),
+}
+
