@@ -28,7 +28,7 @@ class GetCommonStudents {
 
     // If single tutor was provided
     if (!Array.isArray(this.queries.tutor)) {
-      return {students: aStudents};
+      return {students: aStudents.flat()};
     }
 
     // If multiple tutors but some tutor/s was not found
@@ -48,7 +48,6 @@ class GetCommonStudents {
       const i = aStudentsDup.indexOf(s);
       aStudentsDup = aStudentsDup.slice(0, i).concat(aStudentsDup.slice(i + 1, aStudentsDup.length));
     })
-    aStudentsDup = aStudentsDup.flat();
     return {students: aStudentsDup};
 
   }
