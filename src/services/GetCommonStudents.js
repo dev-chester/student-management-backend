@@ -41,14 +41,14 @@ class GetCommonStudents {
 
     // Finding common student/s
     aStudents = aStudents.flat();
-    aStudentsNoDuplicates = [...new Set(aStudents)];
-    aStudentsDup = [...aStudents];
+    aStudentsNoDuplicates = [...new Set(aStudents)].flat();
+    aStudentsDup = [...aStudents].flat();
 
     aStudentsNoDuplicates.forEach((s) => {
       const i = aStudentsDup.indexOf(s);
       aStudentsDup = aStudentsDup.slice(0, i).concat(aStudentsDup.slice(i + 1, aStudentsDup.length));
     })
-
+    aStudentsDup = aStudentsDup.flat();
     return {students: aStudentsDup};
 
   }
